@@ -1,0 +1,18 @@
+class solution(object):
+  def merging(self,word1,word2):
+    merged=[]
+    //using the pointers to store the indexes
+    i,j = 0,0
+    while i < len(word1) and j < len(word2):
+      merged.append(word1[i])
+      merged.append(word2[j])
+      i += 1
+      j += 1
+    merged.append(word1[i:])
+    merged.append(word2[j:])
+    return ''.join(merged)
+s=solution()
+word1="trnydv"
+word2="auiaa"
+print(s.merging(word1,word2))
+//output: taruniyadav 
