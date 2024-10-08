@@ -1,0 +1,8 @@
+//capitalizing 
+def solve(s):
+  words=s.split(' ')
+  capitalized_string=[word.capitalize if word and word[0].isalpha() else word for word in words] // using shorthand if and for 
+  return ' '.join(capitalized_string)
+s = input()//1 w 2 r 3g
+result = solve(s)
+print(result) //output: 1 W 2 R 3g
