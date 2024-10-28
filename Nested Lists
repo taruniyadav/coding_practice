@@ -1,0 +1,26 @@
+limit=int(input())
+students=[]
+for i in range(limit):
+  name=input()
+  marks=float(input())
+  students.append((name,marks))
+second_lowest=sorted(set(marks for name,marks in students))
+lowest_marks=second_lowest[1]
+second_name=[name for name,marks in students if marks==lowest_marks]
+second_name.sort()
+for name in second_name:
+  print(name)
+##input:5
+ Harry
+ 37.21
+ Berry
+ 37.21
+ Tina
+ 37.2
+ Akriti
+ 41
+ Harsh
+ 39
+##output:
+Berry
+Harry
